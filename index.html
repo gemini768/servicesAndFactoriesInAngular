@@ -1,0 +1,32 @@
+<html>
+<head>
+	 <script type="text/javascript" src="scripts/vendor/angular.min.js"></script>
+	 <script type="text/javascript" src="app.js"></script>
+	 <script type="text/javascript" src="myService.js"></script>
+	 <script type="text/javascript" src="myController.js"></script>
+	 <script type="text/javascript" src="otherController.js"></script>
+	 <script type="text/javascript" src="myFactory.js"></script>
+</head>
+<body ng-app="myApp">
+
+	<div ng-controller="myController as myController">
+		
+		Factory message for Controller 1:{{myController.factoryMsg.factoryMsg}}<br>
+		Service message for Controller 1:{{myController.serviceMsg.serviceMsg}}
+
+		<input ng-model="inputMessage" type="text" ng-keyup="myController.setMessage(inputMessage)" />
+
+	</div>
+
+	<div ng-controller="otherController as otherController">
+		
+		Factory message for Controller 2:{{otherController.factoryMsg.factoryMsg}}
+
+	</div>
+		
+
+	
+
+</body>
+
+</html>
